@@ -115,6 +115,5 @@ Add together 7 and 11
 `@sct`
 
 ```{r}
-
+ex %>% check_equal()
 ```
-
