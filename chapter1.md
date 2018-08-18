@@ -115,7 +115,7 @@ Add together 7 and 11
 `@sct`
 
 ```{r}
-check_output_expr("7+11", incorrect_msg="Something went wrong")
+check_output_expr("7+11")
 
 success_msg("Nice work!")
 
