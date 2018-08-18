@@ -70,9 +70,9 @@ R can do more than just addition but can also do subtraction, multiplication and
 `@instructions`
 Do the following problems:
 
-Subtract 3 from 8. 
-Multiply 2 by 6
-Divide 9 by 2
+- Subtract 3 from 8. 
+- Multiply 2 by 6
+- Divide 9 by 2
 
 `@hint`
 
