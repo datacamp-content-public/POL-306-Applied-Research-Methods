@@ -133,18 +133,24 @@ Type in two different operations.
 3 + 4 * 2
 ### is different from
 (3 + 4) * 2
+
 ```
 
 `@solution`
 
 ```{r}
+### Remember you want to keep PEMDAS in mind.
+### For example:
+3 + 4 * 2
+### is different from
+(3 + 4) * 2
 
+3 * 4 - 1
+(2 + 3) * 5
 ```
-
 
 `@sct`
 
 ```{r}
-
+ex %>% check_output_expr("3*4-1") %>% check_output_expr("(2+3)*5")
 ```
-
