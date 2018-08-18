@@ -115,6 +115,6 @@ Add together 7 and 11
 `@sct`
 
 ```{r}
-check_output_expr("7+11")
+ex() %>% check_output_expr("7+11")
 
 ```
