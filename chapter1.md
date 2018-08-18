@@ -110,6 +110,5 @@ Divide 9 by 2
 `@sct`
 
 ```{r}
-
+ex() %>% check_output_expr("8-3")
 ```
-
