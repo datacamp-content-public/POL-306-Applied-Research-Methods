@@ -115,9 +115,8 @@ Add together 7 and 11
 `@sct`
 
 ```{r}
-test_contains("7+11")
+test_contains("7+11", incorrect_msg="Something went wrong")
 
 success_msg("Nice work! Success messages are a great way to keep users engaged even after the exercise is over. Try to encourage them to play around in the console to really grasp the concepts you're trying to teach!")
 
-test_output("18", incorrect-)
 ```
