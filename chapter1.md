@@ -115,7 +115,7 @@ Add together 7 and 11
 `@sct`
 
 ```{r}
-test_contains("7+11", incorrect_msg="Something went wrong")
+test_output_contains("7+11", incorrect_msg="Something went wrong")
 
 success_msg("Nice work!")
 
