@@ -105,9 +105,12 @@ Add together 7 and 11
 `@solution`
 
 ```{r}
+#### To add 3 and 5 type
+3 + 5
 
+### Now add 7 and 11 
+7 + 11
 ```
-
 
 `@sct`
 
