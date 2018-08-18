@@ -1,71 +1,6 @@
 ---
-  title: "Template Chapter 1"
-  description: "This is a template chapter."
----
-
-## An exercise title written in sentence case
-
-```yaml
-type: NormalExercise 
-lang: r
-xp: 100 
-skills: 1
-key: b04a844a4c   
-```
-
-
-This is the assignment text. It should help provide students with the background information needed.
-The instructions that follow should be in bullet point form with clear guidance for what is expected.
-
-
-`@instructions`
-- Instruction 1
-- Instruction 2
-- Instruction 3
-- Instruction 4
-
-`@hint`
-- Here is the hint for this setup problem. 
-- It should get students 50% of the way to the correct answer.
-- So don't provide the answer, but don't just reiterate the instructions.
-- Typically one hint per instruction is a sensible amount.
-
-`@pre_exercise_code`
-
-```{r}
-# Load datasets and packages here.
-```
-
-`@sample_code`
-
-```{r}
-# Your
-# sample
-# code
-# should
-# be
-# ideally
-# 10 lines or less,
-# with a max
-# of 16 lines.
-```
-
-`@solution`
-
-```{r}
-# Answer goes here
-# Make sure to match the comments with your sample code
-# to help students see the differences from solution
-# to given.
-```
-
-`@sct`
-
-```{r}
-# Update this to something more informative.
-success_msg("Some praise! Then reinforce a learning objective from the exercise.")
-```
-
+  title: "Introduction to R"
+  description: "Today we are going to learn the basics of R. "
 ---
 
 ## R Addition
@@ -99,7 +34,7 @@ Add together 7 and 11
 #### To add 3 and 5 type
 3 + 5
 
-### Now add 7 and 11 
+### Now add 7 and 11
 ```
 
 `@solution`
@@ -116,5 +51,65 @@ Add together 7 and 11
 
 ```{r}
 ex() %>% check_output_expr("7+11")
+```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: c02ebefc9d   
+```
+
+
+R can do more than just addition but can also do subtraction, multiplication and division.
+
+
+`@instructions`
+Do the following problems:
+
+Subtract 3 from 8. 
+Multiply 2 by 6
+Divide 9 by 2
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
 
 ```
+
+
+`@sample_code`
+
+```{r}
+### subtraction uses -
+
+## multiplication uses *
+
+## division uses / 
+```
+
+`@solution`
+
+```{r}
+### subtraction uses -
+8 - 3
+
+## multiplication uses *
+6 * 2
+
+## division uses / 
+9 / 2
+```
+
+`@sct`
+
+```{r}
+
+```
+
