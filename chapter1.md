@@ -152,5 +152,5 @@ Type in two different operations.
 `@sct`
 
 ```{r}
-ex %>% check_output_expr("3*4-1") %>% check_output_expr("(2+3)*5")
+ex() %>% check_output_expr("3*4-1") %>% check_output_expr("(2+3)*5")
 ```
