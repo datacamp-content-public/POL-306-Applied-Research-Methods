@@ -115,5 +115,5 @@ Add together 7 and 11
 `@sct`
 
 ```{r}
-success_msg("Some praise! Then reinforce a learning objective from the exercise.")
+check_output()
 ```
