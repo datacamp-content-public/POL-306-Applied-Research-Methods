@@ -117,6 +117,4 @@ Add together 7 and 11
 ```{r}
 check_output_expr("7+11")
 
-success_msg("Nice work!")
-
 ```
