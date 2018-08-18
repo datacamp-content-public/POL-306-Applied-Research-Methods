@@ -110,5 +110,5 @@ Do the following problems:
 `@sct`
 
 ```{r}
-ex() %>% check_output_expr("8-3")
+ex() %>% check_output_expr("8-3") %>% check_output_expr("6*2")  %>% check_output_expr("9/2") 
 ```
