@@ -1,20 +1,22 @@
 ---
-title: Template Chapter 1
-description: This is a template chapter.
+  title: "Template Chapter 1"
+  description: "This is a template chapter."
 ---
 
 ## An exercise title written in sentence case
 
 ```yaml
-type: NormalExercise
+type: NormalExercise 
 lang: r
-xp: 100
+xp: 100 
 skills: 1
-key: b04a844a4c
+key: b04a844a4c   
 ```
+
 
 This is the assignment text. It should help provide students with the background information needed.
 The instructions that follow should be in bullet point form with clear guidance for what is expected.
+
 
 `@instructions`
 - Instruction 1
@@ -63,3 +65,53 @@ The instructions that follow should be in bullet point form with clear guidance 
 # Update this to something more informative.
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
+
+---
+
+## R Addition
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 9ed7531164   
+```
+
+
+We will start off seeing how R can be used as a calculator.
+
+
+`@instructions`
+Add together 7 and 11
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+#### To add 3 and 5 type
+3 + 5
+
+### Now add 7 and 11 
+```
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
