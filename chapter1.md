@@ -18,16 +18,6 @@ We will start off seeing how R can be used as a calculator.
 `@instructions`
 Add together 7 and 11
 
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{r}
-
-```
-
-
 `@sample_code`
 
 ```{r}
@@ -55,7 +45,7 @@ ex() %>% check_output_expr("7+11")
 
 ---
 
-## Insert exercise title here
+## More R calculator functions
 
 ```yaml
 type: NormalExercise 
@@ -74,16 +64,6 @@ Do the following problems:
 - Multiply 2 by 6
 - Divide 9 by 2
 
-`@hint`
-
-
-`@pre_exercise_code`
-
-```{r}
-
-```
-
-
 `@sample_code`
 
 ```{r}
@@ -91,7 +71,7 @@ Do the following problems:
 
 ## multiplication uses *
 
-## division uses / 
+## division uses /
 ```
 
 `@solution`
@@ -110,5 +90,61 @@ Do the following problems:
 `@sct`
 
 ```{r}
-ex() %>% check_output_expr("8-3") %>% check_output_expr("6*2")  %>% check_output_expr("9/2") 
+ex() %>% check_output_expr("8-3") %>% check_output_expr("6*2")  %>% check_output_expr("9/2")
 ```
+
+---
+
+## Multiple Operations
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: e4625d4c47   
+```
+
+
+You do not have to do everything in one line. You can also chain operations together just like you would in math. 
+
+Just like you should, R follows PEMDAS rules of operation.
+
+
+`@instructions`
+Type in two different operations. 
+
+- Multiply 3 by 4 and then subtract 1 from it (your answer should be 11).
+- Add 3 and 2 together and then multiple that by 5 (your answer should be 25).
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+### Remember you want to keep PEMDAS in mind.
+### For example:
+3 + 4 * 2
+### is different from
+(3 + 4) * 2
+```
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
