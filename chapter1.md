@@ -200,3 +200,83 @@ ex() %>% check_output_expr("3*4-1") %>% check_output_expr("(2+3)*5")
 
 `@feedback`
 
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 5ed4fe6b3d   
+```
+
+
+And finally, R also can do exponentiation as well as all the other trig functions that you might remember (sine, cosine, tangent). R even has a lot of a standard variables like pi. We won't use most of these, but just so you see how it works lets try a few.
+
+
+`@instructions`
+You are going to square 3, take the square root of 2 and then finally just double pi.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+### To exponentiate you use the ^ symbol (shift+6 on your keyboard). 
+### Also square roots are the same as exponentiating by (1/2) so the square root of 5 is..
+5^(1/2) 
+
+### Now square 3
+
+### Take the square root of 2
+
+### To use pi, all you have to write is pi
+pi
+
+### You can use this just like a regular number, so double pi below
+
+
+```
+
+
+`@solution`
+
+```{r}
+### To exponentiate you use the ^ symbol (shift+6 on your keyboard). 
+### Also square roots are the same as exponentiating by (1/2) so the square root of 5 is..
+5^(1/2) 
+
+### Now square 3
+3^2
+### Take the square root of 2
+2^(1/2)
+### To use pi, all you have to write is pi
+pi
+
+### You can use this just like a regular number, so double pi below
+2*pi
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
