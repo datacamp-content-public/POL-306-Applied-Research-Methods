@@ -271,7 +271,7 @@ pi
 `@sct`
 
 ```{r}
-
+ex() %>% check_output_expr("3^2") %>% check_output_expr("2^(1/2)") %>% check_output_expr("2*pi")
 ```
 
 
