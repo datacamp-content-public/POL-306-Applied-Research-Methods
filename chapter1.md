@@ -1,6 +1,6 @@
 ---
-  title: "Introduction to R"
-  description: "Today we are going to learn the basics of R. "
+title: 'Introduction to R'
+description: 'Today we are going to learn the basics of R. '
 ---
 
 ## R Addition
@@ -18,6 +18,16 @@ We will start off seeing how R can be used as a calculator.
 `@instructions`
 Add together 7 and 11
 
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -26,6 +36,7 @@ Add together 7 and 11
 
 ### Now add 7 and 11
 ```
+
 
 `@solution`
 
@@ -37,11 +48,19 @@ Add together 7 and 11
 7 + 11
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_output_expr("7+11")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -64,6 +83,16 @@ Do the following problems:
 - Multiply 2 by 6
 - Divide 9 by 2
 
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
 `@sample_code`
 
 ```{r}
@@ -73,6 +102,7 @@ Do the following problems:
 
 ## division uses /
 ```
+
 
 `@solution`
 
@@ -87,11 +117,19 @@ Do the following problems:
 9 / 2
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_output_expr("8-3") %>% check_output_expr("6*2")  %>% check_output_expr("9/2")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
 
 ---
 
@@ -133,8 +171,8 @@ Type in two different operations.
 3 + 4 * 2
 ### is different from
 (3 + 4) * 2
-
 ```
+
 
 `@solution`
 
@@ -149,8 +187,16 @@ Type in two different operations.
 (2 + 3) * 5
 ```
 
+
 `@sct`
 
 ```{r}
 ex() %>% check_output_expr("3*4-1") %>% check_output_expr("(2+3)*5")
 ```
+
+
+`@possible_answers`
+
+
+`@feedback`
+
