@@ -69,3 +69,75 @@ pol
 ```{r}
 
 ```
+
+
+---
+
+## More than just numbers
+
+```yaml
+type: NormalExercise
+key: 3661b50a7d
+xp: 100
+```
+
+Variables don't just have to store numbers, they can also store words or sentences (called **strings**) or a list of numbers (called **vectors**).
+
+`@instructions`
+Create one vector called x with the value "Political Science" and another vector called y that is a list of the numbers 1 through 5.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+### Creating a variable that is a word or sentence is just like doing it with a number
+### but you need to suround the word(s) with quotation marks.
+
+miami <- "Oxford Ohio"
+miami
+
+### Creating a vector (a list of numbers) is more complicated. 
+### you need to surround them with paranthesis and put a c infront of the
+### first paranthesis. Each number should be separated by a comma
+
+primes <- c(1, 3, 5, 7, 11)
+
+### now put your code for x and y below
+```
+
+
+`@solution`
+
+```{r}
+### Creating a variable that is a word or sentence is just like doing it with a number
+### but you need to suround the word(s) with quotation marks.
+
+miami <- "Oxford Ohio"
+miami
+
+### Creating a vector (a list of numbers) is more complicated. 
+### you need to surround them with paranthesis and put a c infront of the
+### first paranthesis. Each number should be separated by a comma
+
+primes <- c(1, 3, 5, 7, 11)
+
+### now put your code for x and y below
+x <- "Political Science"
+y <- c(1, 2, 3, 4, 5)
+```
+
+
+`@sct`
+
+```{r}
+
+```
