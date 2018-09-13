@@ -140,7 +140,7 @@ y <- c(1, 2, 3, 4, 5)
 
 ```{r}
 ex() %>% {
-  check_object(., "x") %>% check_equal(),
+  check_object(., "x") %>% check_equal()
   check_object(., "y") %>% check_equal()
 }
 ```
@@ -211,8 +211,126 @@ pa.pop * .50
 
 ```{r}
 ex() %>% check_correct(
-  check_output_expr(., "pa.pop * .25") %>% check_output_expr("pa.pop * .5") %>% check_output_expr("pa.pop * .1"),
+  {
+    check_output_expr(., "pa.pop * .25")
+    check_output_expr(.,"pa.pop * .5")
+    check_output_expr(.,"pa.pop * .1")
+   },
   check_object(., "pa.pop") %>% check_equal()
 )
+
+```
+
+
+---
+
+## Functions
+
+```yaml
+type: NormalExercise
+key: 4459f12500
+xp: 100
+```
+
+Along with variables, R has **functions** which are scripts that run on the variables you give them. There are thousands of functions that have been written for R, and you can download more of them for specialized tasks as well. Right now we are just going to see how functions work, and how to find out more about them.
+
+`@instructions`
+We are going to start by looking at just three functions: sum, range, and sort. Each function is run by writing function(x) where "function" is the name of the function and "x" is the variable you are running it on. You can also save the output of a function as a new variable just like you would store another variable: "y <- function(x)"
+
+The functions that we will us here are relatively simple:
+- sum: returns the summation of all the numbers in the vector you give it. 
+- range: returns the minimum and maximum value present in the vector you give it. 
+- sort: returns the vector you gave it but reordered from lowest to highest
+
+Start by defining a variable called x that is a vector that contains the numbers 12, 4, 3, 2, 5, and -4. Next calculate the summation of all the numbers in x and store it as tot. Then find the minimum and maximum of x. Finally use the sort function to rewrite x so that it is in order from highest to lowest.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+##### Remember to run a function on something you write it like:
+sort(c(4,2,5,1,2))
+#### You can run functions on stored variables or directly on the numbers like I did above
+
+
+```
+
+
+`@solution`
+
+```{r}
+x <- c(12,4,3,2,5,-4)
+tot <- sum(x)
+range(x)
+x <- sort(x)
+```
+
+
+`@sct`
+
+```{r}
+ex() %>% {
+  check_object(., x) %>% check_equal()
+  check_object(., tot) %>% check_equal()
+  check_function(., "sum")
+  check_function(., "range")
+  check_function(., "sort")
+}
+```
+
+
+---
+
+## Variables and Datasets
+
+```yaml
+type: NormalExercise
+key: 7d54c3d304
+xp: 100
+```
+
+We usually do not build all of our variables by hand. Instead we use saved files to import them as datasets. 
+
+Datasets are like excel sheets where each column is a different variable and each row is a different unit. Often you will actually load a dataset from an excel file or from a "csv" file. You will have to store the dataset as its own "variable" just like you stored the numbers, strings, and vectors previously. Then you will be able to access different variables and units on the dataset. Lets start though just by loading the dataset and looking at functions.
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
 
 ```
