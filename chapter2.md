@@ -139,10 +139,10 @@ y <- c(1, 2, 3, 4, 5)
 `@sct`
 
 ```{r}
-ex() %>% check_correct(
+ex() %>% {
   check_object(., "x") %>% check_equal(),
   check_object(., "y") %>% check_equal()
-  )
+ }
 ```
 
 
@@ -212,7 +212,7 @@ pa.pop * .50
 ```{r}
 ex() %>% check_correct(
   check_output_expr(., "pa.pop * .25") %>% check_output_expr("pa.pop * .5") %>% check_output_expr("pa.pop * .1"),
-  check_object(., "pa.pop") %>% check_equal(),
+  check_object(., "pa.pop") %>% check_equal()
 )
 
 ```
