@@ -373,7 +373,7 @@ sort(x, decreasing=T)
 `@sct`
 
 ```{r}
-ex %>% check_function("sort") %>% check_arg("decreasing") %>% check_equal()
+ex() %>% check_function("sort") %>% check_arg("decreasing") %>% check_equal()
 ```
 
 
