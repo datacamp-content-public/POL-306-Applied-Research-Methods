@@ -67,7 +67,7 @@ pol
 `@sct`
 
 ```{r}
-
+ex() %>% test_object("pol")
 ```
 
 
