@@ -142,7 +142,7 @@ y <- c(1, 2, 3, 4, 5)
 ex() %>% {
   check_object(., "x") %>% check_equal(),
   check_object(., "y") %>% check_equal()
- }
+}
 ```
 
 
