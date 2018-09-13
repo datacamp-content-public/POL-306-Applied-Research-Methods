@@ -279,8 +279,8 @@ x <- sort(x)
 
 ```{r}
 ex() %>% {
-  check_object(., x) %>% check_equal()
-  check_object(., tot) %>% check_equal()
+  check_object(., "x") %>% check_equal()
+  check_object(., "tot") %>% check_equal()
   check_function(., "sum")
   check_function(., "range")
   check_function(., "sort")
