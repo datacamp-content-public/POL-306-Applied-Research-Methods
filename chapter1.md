@@ -203,7 +203,7 @@ ex() %>% check_output_expr("3*4-1") %>% check_output_expr("(2+3)*5")
 
 ---
 
-## Insert exercise title here
+## Final check
 
 ```yaml
 type: NormalExercise 
