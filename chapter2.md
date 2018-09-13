@@ -211,8 +211,10 @@ pa.pop * .50
 
 ```{r}
 ex() %>% check_correct(
-  check_object(., "pa.pop") %>% check_equal()
-  check_output_expr(., "ohio.pop * .25") %>% check_output_expr("pa.pop * .5") %>% check_output_expr("pa.pop * .1")
+  check_object(., "pa.pop") %>% check_equal(),
+  check_output_expr(., "ohio.pop * .25"), 
+  check_output_expr(., "pa.pop * .5"),
+  check_output_expr(., "pa.pop * .1")
 )
 
 ```
