@@ -290,6 +290,95 @@ ex() %>% {
 
 ---
 
+## Getting help with functions
+
+```yaml
+type: NormalExercise
+key: 71bee9060e
+xp: 100
+```
+
+In general R is not often very helpful (at least when it produces errors). It can be helpful though if you need to understand **what** you can do with a function. R has its own baked in help that you can access by running "?function" where function is the function you want help about. This will open up something (if you are in RStudio it will open a page on the lower right) that explains:
+-A short description of the function
+-How you can call the function (this sometimes includes related functions as well), including how to set different options (arguments)
+-A description of the different options that the function has. These are called arguments and they can include a lot of different things depending on the function.
+-A more detailed description of the function
+-Examples of how the function is used (not often helpful examples though)
+
+`@instructions`
+This will be a simple assignment. All I want is for you to take vector used in the previous assignment and sort it but instead of having it go from low to high it should go from high to low. To do this you'll need to look up the help page of sort and look for an argument that you think will change the direction of the ordering.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+### to start, lets look at another function, seq
+### seq creates a sequence of a numbers as a vector
+seq(1, 10) ## will output a sequence from 1 to 10
+
+### but what if you want to create one with only even numbers?
+?seq #calls up the help 
+
+### you should see that seq has several arguments and several related functions
+### right now we are using just from and to in the seq call but we aren't 
+### explicity naming them. There is also an argument called by 
+### this changes the increment of the sequence so if we do
+seq(2, 10, by=2)
+
+### we get only even numbers from 2 to 10
+### you can also make all arguments explicit:
+seq(from=2, to=10, by=10)
+
+### now take x from the previous example and sort it in the opposite direction
+x <- c(12,4,3,2,5,-4)
+
+```
+
+
+`@solution`
+
+```{r}
+### to start, lets look at another function, seq
+### seq creates a sequence of a numbers as a vector
+seq(1, 10) ## will output a sequence from 1 to 10
+
+### but what if you want to create one with only even numbers?
+?seq #calls up the help 
+
+### you should see that seq has several arguments and several related functions
+### right now we are using just from and to in the seq call but we aren't 
+### explicity naming them. There is also an argument called by 
+### this changes the increment of the sequence so if we do
+seq(2, 10, by=2)
+
+### we get only even numbers from 2 to 10
+### you can also make all arguments explicit:
+seq(from=2, to=10, by=10)
+
+### now take x from the previous example and sort it in the opposite direction
+x <- c(12,4,3,2,5,-4)
+sort(x, decreasing=T)
+```
+
+
+`@sct`
+
+```{r}
+ex %>% check_function("sort") %>% check_arg("decreasing") %>% check_equal()
+```
+
+
+---
+
 ## Variables and Datasets
 
 ```yaml
