@@ -267,11 +267,12 @@ xp: 100
 ```
 
 In general R is not often very helpful (at least when it produces errors). It can be helpful though if you need to understand **what** you can do with a function. R has its own baked in help that you can access by running "?function" where function is the function you want help about. This will open up something (if you are in RStudio it will open a page on the lower right) that explains:
--A short description of the function
--How you can call the function (this sometimes includes related functions as well), including how to set different options (arguments)
--A description of the different options that the function has. These are called arguments and they can include a lot of different things depending on the function.
--A more detailed description of the function
--Examples of how the function is used (not often helpful examples though)
+
+- A short description of the function
+- How you can call the function (this sometimes includes related functions as well), including how to set different options (arguments)
+- A description of the different options that the function has. These are called arguments and they can include a lot of different things depending on the function.
+- A more detailed description of the function
+- Examples of how the function is used (not often helpful examples though)
 
 `@instructions`
 This will be a simple assignment. All I want is for you to take vector used in the previous assignment and sort it but instead of having it go from low to high it should go from high to low. To do this you'll need to look up the help page of sort and look for an argument that you think will change the direction of the ordering.
@@ -349,10 +350,16 @@ xp: 100
 
 We usually do not build all of our variables by hand. Instead we use saved files to import them as datasets. 
 
-Datasets are like excel sheets where each column is a different variable and each row is a different unit. Often you will actually load a dataset from an excel file or from a "csv" file. You will have to store the dataset as its own "variable" just like you stored the numbers, strings, and vectors previously. Then you will be able to access different variables and units on the dataset. Lets start though just by loading the dataset and looking at functions.
+Datasets are like excel sheets where each column is a different variable and each row is a different unit. Often you will actually load a dataset from an excel file or from a "csv" file. You will have to store the dataset as its own "variable" just like you stored the numbers, strings, and vectors previously. Then you will be able to access different variables and units on the dataset. 
+
+To load a dataset you need to the function: **read.csv** this takes the name of the file as an argument and returns the dataset.
+
+Once you load the dataset you can access particular variables in it using **$variablename$$. If you had a variable named gender in the dataset df then you'd access it by calling **df$gender**
 
 `@instructions`
+There is a dataset named "state_party.csv" which contains data for 2010 on the estimated proportion of Republican and Democratic voters as well a the percentage of Democrats and Republicans in the state legislature (just the lower chamber). 
 
+You are going to load it, and then calculate the range of democrats and republican voters and store them (separately) as dem.range and rep.range.
 
 `@hint`
 
@@ -364,11 +371,36 @@ Datasets are like excel sheets where each column is a different variable and eac
 
 `@sample_code`
 ```{r}
+### The file is named "state_party.csv" so to load it use read.csv("state_party.csv") 
+### to manpulate it you need to store it as something (I suggest using df)
 
+### to figure out what variables are called pass the dataset you made to the
+### function names(): names(df) this will display the names of each column
+### the one we are interested in are just called democrats and republicans
+
+### Once you created the dataset you can the pass variables to a function
+### just like we did previously, but write out the whole thing: df$democrats
 ```
 
 `@solution`
 ```{r}
+### The file is named "state_party.csv" so to load it use read.csv("state_party.csv") 
+### to manpulate it you need to store it as something (I suggest using df)
+
+df <- read.csv("state_party.csv")
+
+### to figure out what variables are called pass the dataset you made to the
+### function names(): names(df) this will display the names of each column
+### the one we are interested in are just called democrats and republicans
+
+names(df)
+
+### Once you created the dataset you can the pass variables to a function
+### just like we did previously, but write out the whole thing: df$democrats
+
+dem.range <- range(df$democrats)
+rep.range <- range(df$republicans)
+
 
 ```
 
