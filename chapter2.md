@@ -387,19 +387,19 @@ You are going to load it, and then calculate the range of democrats and republic
 ### The file is named "state_party.csv" so to load it use read.csv("state_party.csv") 
 ### to manpulate it you need to store it as something (I suggest using df)
 
-df <- read.csv("state_party.csv")
+# df <- read.csv("state_party.csv")
 
 ### to figure out what variables are called pass the dataset you made to the
 ### function names(): names(df) this will display the names of each column
 ### the one we are interested in are just called democrats and republicans
 
-names(df)
+# names(df)
 
 ### Once you created the dataset you can the pass variables to a function
 ### just like we did previously, but write out the whole thing: df$democrats
 
-dem.range <- range(df$democrats)
-rep.range <- range(df$republicans)
+# dem.range <- range(df$democrats)
+# rep.range <- range(df$republicans)
 
 
 ```
