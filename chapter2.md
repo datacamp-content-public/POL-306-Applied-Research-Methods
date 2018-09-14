@@ -354,7 +354,7 @@ Datasets are like excel sheets where each column is a different variable and eac
 
 To load a dataset you need to the function: **read.csv** this takes the name of the file as an argument and returns the dataset.
 
-Once you load the dataset you can access particular variables in it using **$variablename$$. If you had a variable named gender in the dataset df then you'd access it by calling **df$gender**
+Once you load the dataset you can access particular variables in it using **$variablename**. If you had a variable named gender in the dataset df then you'd access it by calling **df$gender**
 
 `@instructions`
 There is a dataset named "state_party.csv" which contains data for 2010 on the estimated proportion of Republican and Democratic voters as well a the percentage of Democrats and Republicans in the state legislature (just the lower chamber). 
@@ -379,11 +379,11 @@ rm(list=ls())
 
 ### to figure out what variables are called pass the dataset you made to the
 ### function names(): names(df) this will display the names of each column
-### the one we are interested in are just called democrats and republicans
+### the one we are interested in are just called democrat and republican
 ### you can also call head(df) to see the first few rows of the dataset
 
 ### Once you created the dataset you can the pass variables to a function
-### just like we did previously, but write out the whole thing: df$democrats
+### just like we did previously, but write out the whole thing: df$democrat
 ```
 
 `@solution`
@@ -402,8 +402,8 @@ names(df)
 ### Once you created the dataset you can the pass variables to a function
 ### just like we did previously, but write out the whole thing: df$democrats
 
-dem.range <- range(df$democrats)
-rep.range <- range(df$republicans)
+dem.range <- range(df$democrat)
+rep.range <- range(df$republican)
 
 
 ```
