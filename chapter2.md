@@ -380,6 +380,7 @@ rm(list=ls())
 ### to figure out what variables are called pass the dataset you made to the
 ### function names(): names(df) this will display the names of each column
 ### the one we are interested in are just called democrats and republicans
+### you can also call head(df) to see the first few rows of the dataset
 
 ### Once you created the dataset you can the pass variables to a function
 ### just like we did previously, but write out the whole thing: df$democrats
@@ -390,24 +391,27 @@ rm(list=ls())
 ### The file is named "state_party.csv" so to load it use read.csv("state_party.csv") 
 ### to manpulate it you need to store it as something (I suggest using df)
 
-# df <- read.csv("state_party.csv")
+df <- read.csv("state_party.csv")
 
 ### to figure out what variables are called pass the dataset you made to the
 ### function names(): names(df) this will display the names of each column
 ### the one we are interested in are just called democrats and republicans
 
-# names(df)
+names(df)
 
 ### Once you created the dataset you can the pass variables to a function
 ### just like we did previously, but write out the whole thing: df$democrats
 
-# dem.range <- range(df$democrats)
-# rep.range <- range(df$republicans)
+dem.range <- range(df$democrats)
+rep.range <- range(df$republicans)
 
 
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% {
+  check_object(., "dem.range") %>% check_equal()
+  check_object(., "rep.range") %>% check_equal()
+}
 ```
