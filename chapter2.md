@@ -24,14 +24,11 @@ For this assignment I want you to create a variable named pol and assign it the 
 
 
 `@pre_exercise_code`
-
 ```{r}
 
 ```
 
-
 `@sample_code`
-
 ```{r}
 ##### again we can start by assigning 4 to kevin
 
@@ -45,9 +42,7 @@ kevin
 #### now assign 25 to pol, and then call it again
 ```
 
-
 `@solution`
-
 ```{r}
 ##### again we can start by assigning 4 to kevin
 
@@ -63,13 +58,10 @@ pol <- 25
 pol
 ```
 
-
 `@sct`
-
 ```{r}
 ex() %>% check_object("pol") %>% check_equal()
 ```
-
 
 ---
 
@@ -90,14 +82,11 @@ Create one vector called x with the value "Political Science" and another vector
 
 
 `@pre_exercise_code`
-
 ```{r}
 
 ```
 
-
 `@sample_code`
-
 ```{r}
 ### Creating a variable that is a word or sentence is just like doing it with a number
 ### but you need to suround the word(s) with quotation marks.
@@ -114,9 +103,7 @@ primes <- c(1, 3, 5, 7, 11)
 ### now put your code for x and y below
 ```
 
-
 `@solution`
-
 ```{r}
 ### Creating a variable that is a word or sentence is just like doing it with a number
 ### but you need to suround the word(s) with quotation marks.
@@ -135,9 +122,7 @@ x <- "Political Science"
 y <- c(1, 2, 3, 4, 5)
 ```
 
-
 `@sct`
-
 ```{r}
 ex() %>% {
   check_object(., "x") %>% check_equal()
@@ -145,10 +130,9 @@ ex() %>% {
 }
 ```
 
-
 ---
 
-## So what? 
+## So what?
 
 ```yaml
 type: NormalExercise
@@ -167,14 +151,11 @@ The Pennsylvania population is 12,805,537. Store it as the variable pa.pop and t
 
 
 `@pre_exercise_code`
-
 ```{r}
 
 ```
 
-
 `@sample_code`
-
 ```{r}
 ## store the population of ohio:
 ohio.pop <- 11658609
@@ -187,9 +168,7 @@ ohio.pop <- 11658609
 
 ```
 
-
 `@solution`
-
 ```{r}
 ## store the population of ohio:
 ohio.pop <- 11658609 ### note that you can't include commas in the numbers
@@ -206,9 +185,7 @@ pa.pop * .10
 pa.pop * .50
 ```
 
-
 `@sct`
-
 ```{r}
 ex() %>% check_correct(
   {
@@ -220,7 +197,6 @@ ex() %>% check_correct(
 )
 
 ```
-
 
 ---
 
@@ -248,14 +224,11 @@ Start by defining a variable called x that is a vector that contains the numbers
 
 
 `@pre_exercise_code`
-
 ```{r}
 
 ```
 
-
 `@sample_code`
-
 ```{r}
 ##### Remember to run a function on something you write it like:
 sort(c(4,2,5,1,2))
@@ -264,9 +237,7 @@ sort(c(4,2,5,1,2))
 
 ```
 
-
 `@solution`
-
 ```{r}
 x <- c(12,4,3,2,5,-4)
 tot <- sum(x)
@@ -274,9 +245,7 @@ range(x)
 x <- sort(x)
 ```
 
-
 `@sct`
-
 ```{r}
 ex() %>% {
   check_object(., "x") %>% check_equal()
@@ -286,7 +255,6 @@ ex() %>% {
   check_function(., "sort")
 }
 ```
-
 
 ---
 
@@ -312,14 +280,11 @@ This will be a simple assignment. All I want is for you to take vector used in t
 
 
 `@pre_exercise_code`
-
 ```{r}
 
 ```
 
-
 `@sample_code`
-
 ```{r}
 ### to start, lets look at another function, seq
 ### seq creates a sequence of a numbers as a vector
@@ -343,9 +308,7 @@ x <- c(12,4,3,2,5,-4)
 
 ```
 
-
 `@solution`
-
 ```{r}
 ### to start, lets look at another function, seq
 ### seq creates a sequence of a numbers as a vector
@@ -369,13 +332,10 @@ x <- c(12,4,3,2,5,-4)
 sort(x, decreasing=T)
 ```
 
-
 `@sct`
-
 ```{r}
 ex() %>% check_function("sort") %>% check_arg("decreasing") %>% check_equal()
 ```
-
 
 ---
 
@@ -398,28 +358,21 @@ Datasets are like excel sheets where each column is a different variable and eac
 
 
 `@pre_exercise_code`
-
 ```{r}
 
 ```
-
 
 `@sample_code`
-
 ```{r}
 
 ```
-
 
 `@solution`
-
 ```{r}
 
 ```
 
-
 `@sct`
-
 ```{r}
 
 ```
