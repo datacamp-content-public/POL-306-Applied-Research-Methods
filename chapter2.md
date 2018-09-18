@@ -433,7 +433,9 @@ A final few notes.
 2) Sometimes vectors in datasets have missing files. Theses show up as NA when call them. A lot of R functions do not know what to do with missing values so you have to tell it what to do. To do this you *usually* add na.rm=T to a function call. Below I demonstrate both of these.
 
 `@instructions`
-No assignment for this one, just look at what I did to setwd() and to use a function on a vector with missing values.
+No assignment for this one, just look at what I did to setwd() and to use a function on a vector with missing values. 
+
+After you run the code just hit submit answer to finish this chapter.
 
 `@hint`
 
