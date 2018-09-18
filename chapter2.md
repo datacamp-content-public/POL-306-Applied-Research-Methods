@@ -415,3 +415,65 @@ ex() %>% {
   check_object(., "rep.range") %>% check_equal()
 }
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+key: f3fec926b7
+xp: 100
+```
+
+A final few notes. 
+
+1) In order to load a file using read.csv() you first have to tell R where to look on your computer. To do this you will need to use setwd(). In setwd() you need to place the path to your file. This might look like: "/users/kevinreuning/dropbox" or "C:/users/kevinreuning/dropbox". 
+
+2) Sometimes vectors in datasets have missing files. Theses show up as NA when call them. A lot of R functions do not know what to do with missing values so you have to tell it what to do. To do this you *usually* add na.rm=T to a function call. Below I demonstrate both of these.
+
+`@instructions`
+No assignment for this one, just look at what I did to setwd() and to use a function on a vector with missing values.
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/f4fba345dc08afca82b97fc821143163783daaa8/state_party.csv")
+
+write.csv(tmp.df, "state_party.csv", row.names=F)
+rm(list=ls())
+```
+
+
+`@sample_code`
+
+```{r}
+### Sets the working directory (this is actually the default so you didn't have to do it last assignment)
+setwd("/home/repl")
+df <- read.csv("state_party.csv")
+
+df$hs_dem_prop_all ## has a missing value
+
+
+range(df$hs_dem_prop_all) ## doesn't provide a result
+
+
+range(df$hs_dem_prop_all, na.rm=T) ## drops the missing value 
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
