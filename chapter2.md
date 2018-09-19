@@ -218,7 +218,10 @@ The functions that we will us here are relatively simple:
 - range: returns the minimum and maximum value present in the vector you give it. 
 - sort: returns the vector you gave it but reordered from lowest to highest
 
-Start by defining a variable called x that is a vector that contains the numbers 12, 4, 3, 2, 5, and -4. Next calculate the summation of all the numbers in x and store it as tot. Then find the minimum and maximum of x. Finally use the sort function to rewrite x so that it is in order from highest to lowest.
+Start by defining a variable called x that is a vector that contains the numbers 12, 4, 3, 2, 5, and -4. 
+Next calculate the summation of all the numbers in x and store it as tot. 
+Then find the minimum and maximum of x. 
+Finally use the sort function to rewrite x so that it is in order from highest to lowest (you will have to save this new x overtop of the old x).
 
 `@hint`
 
