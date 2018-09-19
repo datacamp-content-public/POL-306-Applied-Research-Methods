@@ -277,6 +277,8 @@ In general R is not often very helpful (at least when it produces errors). It ca
 `@instructions`
 This will be a simple assignment. All I want is for you to take vector used in the previous assignment and sort it but instead of having it go from low to high it should go from high to low. To do this you'll need to look up the help page of sort and look for an argument that you think will change the direction of the ordering.
 
+Note that a lot of arguments take the form of "something = FALSE" this means that the default is for this argument to be off. To turn it on, change it to "something = TRUE" when you call it.
+
 `@hint`
 
 
