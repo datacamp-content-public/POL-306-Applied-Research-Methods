@@ -22,7 +22,6 @@ Remember to load data you need to call read.csv save the output: df <- read.csv(
 
 
 `@pre_exercise_code`
-
 ```{r}
 tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/f4fba345dc08afca82b97fc821143163783daaa8/state_party.csv")
 
@@ -30,16 +29,12 @@ write.csv(tmp.df, "state_party.csv", row.names=F)
 rm(list=ls())
 ```
 
-
 `@sample_code`
-
 ```{r}
 
 ```
 
-
 `@solution`
-
 ```{r}
 df <- read.csv("state_party.csv")
 
@@ -51,9 +46,7 @@ mean(df$republican)
 median(df$republican)
 ```
 
-
 `@sct`
-
 ```{r}
 ex() %>% {
   check_function(., "mean") 
@@ -65,7 +58,6 @@ ex() %>% {
 
 }
 ```
-
 
 ---
 
@@ -93,7 +85,6 @@ Make a histogram of either democrat or republican and change the xaxis and the m
 
 
 `@pre_exercise_code`
-
 ```{r}
 tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/f4fba345dc08afca82b97fc821143163783daaa8/state_party.csv")
 
@@ -101,17 +92,13 @@ write.csv(tmp.df, "state_party.csv", row.names=F)
 rm(list=ls())
 ```
 
-
 `@sample_code`
-
 ```{r}
 df <- read.csv("state_party.csv")
 
 ```
 
-
 `@solution`
-
 ```{r}
 df <- read.csv("state_party.csv")
 
@@ -120,16 +107,13 @@ hist(df$republican, xlab="Percentage of Democrats", main="Histogram of Democrats
 
 ```
 
-
 `@sct`
-
 ```{r}
 ex() %>% check_function("hist") %>% {
   check_arg(., "xlab")
   check_arg(., "main")
 }
 ```
-
 
 ---
 
@@ -154,7 +138,6 @@ To find out what the variable is called use names(). Also note, Nebraska (which 
 
 
 `@pre_exercise_code`
-
 ```{r}
 tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/f4fba345dc08afca82b97fc821143163783daaa8/state_party.csv")
 
@@ -162,17 +145,13 @@ write.csv(tmp.df, "state_party.csv", row.names=F)
 rm(list=ls())
 ```
 
-
 `@sample_code`
-
 ```{r}
 df <- read.csv("state_party.csv")
 
 ```
 
-
 `@solution`
-
 ```{r}
 
 mean(df$hs_dem_prop_all, na.rm=T)
@@ -182,9 +161,7 @@ hist(df$hs_dem_prop_all)
 
 ```
 
-
 `@sct`
-
 ```{r}
 ex() %>% {
   check_function("mean") %>% check_arg("na.rm") %>% check_equal()
