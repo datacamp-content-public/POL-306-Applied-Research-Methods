@@ -278,7 +278,7 @@ ex() %>% {
 
 ---
 
-## Insert exercise title here
+## Finding observation numbers
 
 ```yaml
 type: NormalExercise
@@ -287,6 +287,8 @@ xp: 100
 ```
 
 One last thing. You may have noticed that you didn't directly see the number of observations in the tables we created. You'll have to check those yourself. The easiest way is to again use a function within a function by calling sum(table(x)). This will add up all the individual frequencies. 
+
+For interval variables you can calculate this by seeing which of your observations are not missing and then adding up that. This first step is done using is.na() which checks to see if an observation is missing and returns true or false. You want the opposite of that so you add an exclamation point in front and then sum it up: sum(!is.na(x))
 
 `@instructions`
 No assignment here. Click next after looking at the code to be done.
@@ -300,6 +302,11 @@ tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/dat
 
 write.csv(tmp.df, "ANES_Lim.csv", row.names=F)
 rm(list=ls())
+
+tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/f4fba345dc08afca82b97fc821143163783daaa8/state_party.csv")
+
+write.csv(tmp.df, "state_party.csv", row.names=F)
+rm(list=ls())
 ```
 
 `@sample_code`
@@ -311,8 +318,11 @@ table(df$newsint)
 sum(table(df$newsint))
 
 
+df <- read.csv("state_party.csv")
 
+is.na(df$hs_rep_prop_all)
 
+sum(!is.na(df$hs_rep_prop_all))
 ```
 
 `@solution`
