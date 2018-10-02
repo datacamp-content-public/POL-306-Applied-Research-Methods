@@ -46,12 +46,6 @@ Add together 7 and 11
 ex() %>% check_output_expr("7+11")
 ```
 
-`@possible_answers`
-
-
-`@feedback`
-
-
 ---
 
 ## More R calculator functions
@@ -109,12 +103,6 @@ ex() %>% {
 }
 ```
 
-`@possible_answers`
-
-
-`@feedback`
-
-
 ---
 
 ## Multiple Operations
@@ -171,12 +159,6 @@ ex() %>% {
   check_output_expr(., "(2+3)*5")
 }
 ```
-
-`@possible_answers`
-
-
-`@feedback`
-
 
 ---
 
@@ -246,8 +228,3 @@ ex() %>% {
 }
 
 ```
-
-`@possible_answers`
-
-
-`@feedback`
