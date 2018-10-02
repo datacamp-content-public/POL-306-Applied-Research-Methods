@@ -153,6 +153,7 @@ df <- read.csv("state_party.csv")
 
 `@solution`
 ```{r}
+df <- read.csv("state_party.csv")
 
 mean(df$hs_dem_prop_all, na.rm=T)
 sd(df$hs_dem_prop_all, na.rm=T)
@@ -164,9 +165,9 @@ hist(df$hs_dem_prop_all)
 `@sct`
 ```{r}
 ex() %>% {
-  check_function("mean") %>% check_arg("na.rm") %>% check_equal()
-  check_function("sd") %>% check_arg("na.rm") %>% check_equal()
-  check_function("hist") 
+  check_function(., "mean") %>% check_arg("na.rm") %>% check_equal()
+  check_function(., "sd") %>% check_arg("na.rm") %>% check_equal()
+  check_function(., "hist") 
 
 }
 ```
@@ -273,4 +274,53 @@ ex() %>% {
   check_function(., "prop.table") %>% check_arg("margin") %>% check_equal()
   check_output_expr(., "prop.table(table(df$newsint, df$gender), margin=2)" )
 }
+```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+key: a89bdff145
+xp: 100
+```
+
+One last thing. You may have noticed that you didn't directly see the number of observations in the tables we created. You'll have to check those yourself. The easiest way is to again use a function within a function by calling sum(table(x)). This will add up all the individual frequencies. 
+
+`@instructions`
+No assignment here. Click next after looking at the code to be done.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/5a4effcd07538b8b70830dd27e57ed8d97e39c22/ANES_Lim.csv")
+
+write.csv(tmp.df, "ANES_Lim.csv", row.names=F)
+rm(list=ls())
+```
+
+`@sample_code`
+```{r}
+df <- read.csv("ANES_Lim.csv")
+
+table(df$newsint)
+
+sum(table(df$newsint))
+
+
+
+
+```
+
+`@solution`
+```{r}
+
+```
+
+`@sct`
+```{r}
+
 ```
