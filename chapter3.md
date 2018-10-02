@@ -114,3 +114,113 @@ ex() %>% check_function("hist") %>% {
   check_arg(., "main")
 }
 ```
+
+---
+
+## Standard Deviation
+
+```yaml
+type: NormalExercise
+key: ed9703cc7f
+xp: 100
+```
+
+Next, you can use sd() to find the standard deviation of a vector.
+
+`@instructions`
+Along with the percentage of Democrats/Republicans in a state the data has the percentage of state legislators that are Democratic and Republican. 
+
+For this assignment find the mean, the standard deviation and plot the histogram of either the percentage of Democrats or Republicans in a state legislature. 
+
+To find out what the variable is called use names(). Also note, Nebraska (which is in the data) has a non-partisan legislature so it does not have a value for Republicans and Democrats. You will need to tell R to ignore this when you calculate the mean and standard deviation.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/f4fba345dc08afca82b97fc821143163783daaa8/state_party.csv")
+
+write.csv(tmp.df, "state_party.csv", row.names=F)
+rm(list=ls())
+```
+
+`@sample_code`
+```{r}
+df <- read.csv("state_party.csv")
+
+```
+
+`@solution`
+```{r}
+
+mean(df$hs_dem_prop_all, na.rm=T)
+sd(df$hs_dem_prop_all, na.rm=T)
+hist(df$hs_dem_prop_all)
+
+
+```
+
+`@sct`
+```{r}
+ex() %>% {
+  check_function("mean") %>% check_arg("na.rm") %>% check_equal()
+  check_function("sd") %>% check_arg("na.rm") %>% check_equal()
+  check_function("hist") 
+
+}
+```
+
+---
+
+## Frequency Tables
+
+```yaml
+type: NormalExercise
+key: bffca44ed6
+xp: 100
+```
+
+Up until now we've been focusing on interval variables, but many of you are using nominal or ordinal variables. 
+
+Creating frequency tables and crosstabs is really simple in R. All you have to use is the tables() function. The tables function expects either 1 or 2 vectors. If you do table(x) then it will show the frequency of all the values that x takes on. If you do table(x, y) then it creates a frequency crosstab between x and y. 
+
+`@instructions`
+I've loaded a new dataset for you all in this assignment. There is now a csv called "ANES_Lim.csv" that comes from the survey data some of you are using. It includes three variables: gender, employment status, and how interested they are in the news. 
+
+For this assignment you just need to load the data and create a frequency table and a crosstab. You can use whatever variables you want.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/5a4effcd07538b8b70830dd27e57ed8d97e39c22/ANES_Lim.csv")
+
+write.csv(tmp.df, "ANES_Lim.csv", row.names=F)
+rm(list=ls())
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+df <- read.csv("ANES_Lim.csv")
+
+table(df$gender)
+
+table(df$gender, df$newsint)
+
+```
+
+`@sct`
+```{r}
+ex() %>% {
+  check_function("table") %>% check_arg("x") 
+  check_function("table") %>% check_arg("y") 
+
+}
+```
