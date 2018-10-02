@@ -218,9 +218,59 @@ table(df$gender, df$newsint)
 
 `@sct`
 ```{r}
-ex() %>% {
-  check_function("table") %>% check_arg("x") 
-  check_function("table") %>% check_arg("y") 
+ex() %>% check_function("table")  
 
+```
+
+---
+
+## Proportions
+
+```yaml
+type: NormalExercise
+key: 165fbe52f5
+xp: 100
+```
+
+The table() function only creates frequency tables and does not show proportions. To calculate that we need to run another function: prop.table()
+
+The easiest way to do this is to nest functions. We do this by putting another function around our first function so instead of table(x) we would do prop.table(table(x)). This calculates a frequency table for x, then returns it to prop.table which calculates the cells as a proportion. 
+
+prop.table() also needs to be told if you want to calculate proportions for rows or columns. It does this through the margin argument. Remember to use an argument you put it in the function call separating arguments with a comma. So: prop.table(table(x), margin=1). Margin can be set to 1, 2, or left empty. 
+
+`@instructions`
+Create crosstabs of the relationship between interest in news and gender. Assume that gender is your independent variable and that news interest is your dependent variable. You'll have to figure out if margin should be 1 or 2 to ensure that you have column proportions.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/5a4effcd07538b8b70830dd27e57ed8d97e39c22/ANES_Lim.csv")
+
+write.csv(tmp.df, "ANES_Lim.csv", row.names=F)
+rm(list=ls())
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+df <- read.csv("ANES_Lim.csv")
+
+
+prop.table(table(df$newsint, df$gender), margin=2)
+
+```
+
+`@sct`
+```{r}
+ex() %>% {
+  check_function(., "table")
+  check_function(., "prop.table") %>% check_arg("margin") %>% check_equal()
+  check_output_expr(., "prop.table(table(df$newsint, df$gender), margin=2)" )
 }
 ```
