@@ -184,7 +184,7 @@ xp: 100
 
 Up until now we've been focusing on interval variables, but many of you are using nominal or ordinal variables. 
 
-Creating frequency tables and crosstabs is really simple in R. All you have to use is the tables() function. The tables function expects either 1 or 2 vectors. If you do table(x) then it will show the frequency of all the values that x takes on. If you do table(x, y) then it creates a frequency crosstab between x and y. 
+Creating frequency tables and crosstabs is really simple in R. All you have to use is the tables() function. The tables function expects either 1 or 2 vectors. If you do table(x) then it will show the frequency of all the values that x takes on. If you do table(x, y) then it creates a frequency crosstab between x and y.
 
 `@instructions`
 I've loaded a new dataset for you all in this assignment. There is now a csv called "ANES_Lim.csv" that comes from the survey data some of you are using. It includes three variables: gender, employment status, and how interested they are in the news. 
@@ -237,7 +237,7 @@ The table() function only creates frequency tables and does not show proportions
 
 The easiest way to do this is to nest functions. We do this by putting another function around our first function so instead of table(x) we would do prop.table(table(x)). This calculates a frequency table for x, then returns it to prop.table which calculates the cells as a proportion. 
 
-prop.table() also needs to be told if you want to calculate proportions for rows or columns. It does this through the margin argument. Remember to use an argument you put it in the function call separating arguments with a comma. So: prop.table(table(x), margin=1). Margin can be set to 1, 2, or left empty. 
+prop.table() also needs to be told if you want to calculate proportions for rows or columns. It does this through the margin argument. Remember to use an argument you put it in the function call separating arguments with a comma. So: prop.table(table(x), margin=1). Margin can be set to 1, 2, or left empty.
 
 `@instructions`
 Create crosstabs of the relationship between interest in news and gender. Assume that gender is your independent variable and that news interest is your dependent variable. You'll have to figure out if margin should be 1 or 2 to ensure that you have column proportions.
