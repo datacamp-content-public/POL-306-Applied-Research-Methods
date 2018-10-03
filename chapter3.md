@@ -164,7 +164,13 @@ hist(df$hs_dem_prop_all)
 
 `@sct`
 ```{r}
-
+ex() %>% {
+  check_function(., "mean") %>% check_arg("na.rm") %>% check_equal()
+  check_function(., "sd") %>% check_arg("na.rm") %>% check_equal()
+  check_function(., "hist") 
+  check_output_expr(., "sd(df$hs_dem_prop_all, na.rm=T)")
+  check_output_expr(., "mean(df$hs_dem_prop_all, na.rm=T)")
+}
 ```
 
 ---
