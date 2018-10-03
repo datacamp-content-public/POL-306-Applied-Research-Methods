@@ -179,7 +179,7 @@ xp: 100
 
 Up until now we've been focusing on interval variables, but many of you are using nominal or ordinal variables. 
 
-Creating frequency tables and crosstabs is really simple in R. All you have to use is the tables() function. The tables function expects either 1 or 2 vectors. If you do table(x) then it will show the frequency of all the values that x takes on. If you do table(x, y) then it creates a frequency crosstab between x and y.
+Creating frequency tables and crosstabs is really simple in R. All you have to use is the table() function. The tables function expects either 1 or 2 vectors. If you do table(x) then it will show the frequency of all the values that x takes on. If you do table(x, y) then it creates a frequency crosstab between x and y.
 
 `@instructions`
 I've loaded a new dataset for you all in this assignment. There is now a csv called "ANES_Lim.csv" that comes from the survey data some of you are using. It includes three variables: gender, employment status, and how interested they are in the news. 
