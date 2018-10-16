@@ -13,8 +13,7 @@ xp: 100
 
 Today we are going to start by looking at how to do a chi-squared test and then we will look at some general data manipulation in R. 
 
-The function to calculate the chi-squared test is chisq.test(). This expects the two variables as its input. The order of the variables does not matter (remember that from class the way the table is designed does not matter). 
-
+The function to calculate the chi-squared test is chisq.test(). This expects the two variables as its input. The order of the variables does not matter (remember that from class the way the table is designed does not matter).
 
 `@instructions`
 You are going to analyze the relationship between party identification and what convention a protester protested at (either at the RNC or the DNC). This is the same data that is used as an example on this week's assignment. 
@@ -94,7 +93,7 @@ In each of these cases you can then save what is returned using <-
 For example: party_id <- df$party 
 
 **Updating Elements**
-Along with accessing elements you can change them using <- to assign a new value. For example df[1,3] <- "hello" will replace whatever is in the first row and third column with "hello". Brackets and dollar signs will both work if you want to edit what is already there, but if you want to add a new column then you have to use the dollar sign method. For example df$ideology <- ideology would add a new variable/column to df. 
+Along with accessing elements you can change them using <- to assign a new value. For example df[1,3] <- "hello" will replace whatever is in the first row and third column with "hello". Brackets and dollar signs will both work if you want to edit what is already there, but if you want to add a new column then you have to use the dollar sign method. For example df$ideology <- ideology would add a new variable/column to df.
 
 `@instructions`
 1. Find out what the party is of the 32nd observation (row) in the dataframe. DO NOT SAVE IT, JUST PRINT IT OUT. 
@@ -166,8 +165,7 @@ Finally if we want to use this to select a subset of data we use the function su
 For example:
 sub.df <- subset(df, age < 30) 
 
-This will create a new dataframe called sub.df that includes only observations where df$age is less than 30 (note you do not need to repeat df when identifying the age variable as the subset function knows to look for age in the dataframe you provided). 
-
+This will create a new dataframe called sub.df that includes only observations where df$age is less than 30 (note you do not need to repeat df when identifying the age variable as the subset function knows to look for age in the dataframe you provided).
 
 `@instructions`
 Use the subset function and a logical statement to create a new dataframe called sub.df that only contains individuals that identify as Democrats. Note the variable of interest is party and it takes on three values here "Democrat", "Other", and "Independent"
