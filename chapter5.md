@@ -67,3 +67,85 @@ ex() %>% {
   check_function(., "t.test" ) %>% check_arg("alternative")
 }
 ```
+
+---
+
+## Dropping Values
+
+```yaml
+type: NormalExercise
+key: feaeb1297c
+xp: 100
+```
+
+t-tests can only compare two groups. If you have more than two groups you have to decide what to do. You can do either ignore other groups or include observations that are in other groups into one of the two groups of interest. 
+
+Changing the value of a variable in your dataset can be dangerous so it is always good practice to start by saving it as a new variable. Remember we did this before by calling `df$new_var <- df$old_var`. 
+
+Once you create the new variable you can start changing values. The easiest way to do this is to use the dollar sign & bracket mentioned before: df$new_var[ ]. Previously we just put a number in there but we can also put a logical statement and then assign something new to the data we select. This looks like:
+
+df$new_var[logical statement] <- new value 
+
+As a more concrete example lets reassign everyone who said they went on more than 4 marches to just 4:
+
+df$marches[df$marches > 4] <- 4 
+
+Finally if you assign NA then you are making those values that are matched into missing values which makes them easier to drop in commands. 
+
+`@instructions`
+You will test to see if there is a difference between how many maarches Democrats and non-Democrats participated in at the protests. Currently party has three attributes: "Democrat", "Independent" and "Other". 
+
+1. Start by creating a new variable in the dataset named party_new based on the current variable party. 
+2. After you create the variable party_new change all the instances where it is "Independent" to "Other"
+3. Finally do a t-test on the the difference in marches (not the march_recode) between Democrats and non-Democrats.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+tmp.df <- read.csv("http://assets.datacamp.com/production/repositories/3406/datasets/41ae7a219de8ed396ebf3d49e6561a03fe27541a/protest_survey.csv")
+
+write.csv(tmp.df, "Protest_Survey.csv", row.names=F)
+rm(list=ls())
+
+```
+
+`@sample_code`
+```{r}
+df <- read.csv("Protest_Survey.csv")
+names(df) 
+
+df$march_recode <- df$marches
+table(df$march_recode)
+
+df$march_recode[df$march_recode > 4] <- 4
+table(df$march_recode)
+
+
+```
+
+`@solution`
+```{r}
+df <- read.csv("Protest_Survey.csv")
+names(df) 
+
+df$march_recode <- df$marches
+table(df$march_recode)
+
+df$march_recode[df$march_recode > 4] <- 4
+table(df$march_recode)
+
+df$party_new <- df$party
+df$party_new[df$party_new=="Independent"] <- "Other"
+t.test(marches~party_new, data=df)
+```
+
+`@sct`
+```{r}
+ex() %>% {
+  check_function(., "t.test" )
+  check_object(., "df") %>% check_column("party_new") %>% check_equal()
+  check_output_expr(., "t.test(marches~party_new, data=df)")
+}
+```
