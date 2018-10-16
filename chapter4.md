@@ -46,7 +46,8 @@ names(df)
 
 `@solution`
 ```{r}
-
+df <- read.csv("Protest_Survey.csv")
+names(df) 
 
 prop.table(table(df$party, df$convention), margin=2)
 
@@ -112,11 +113,15 @@ rm(list=ls())
 
 `@sample_code`
 ```{r}
-
+df <- read.csv("Protest_Survey.csv")
+names(df) 
 ```
 
 `@solution`
 ```{r}
+df <- read.csv("Protest_Survey.csv")
+names(df) 
+
 df$party[32]
 
 march_number <- df$marches
@@ -193,6 +198,9 @@ df$age < 30
 
 `@solution`
 ```{r}
+df <- read.csv("Protest_Survey.csv")
+names(df) 
+
 sub.df <- subset(df, party=="Democrat")
 ```
 
