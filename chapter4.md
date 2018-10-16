@@ -17,12 +17,14 @@ The function to calculate the chi-squared test is chisq.test(). This expects the
 
 
 `@instructions`
-You are going to analyze the relationship between party identification and where a protester protested (either at the RNC or the DNC). This is the same data that is used as an example on this week's assignment. 
+You are going to analyze the relationship between party identification and what convention a protester protested at (either at the RNC or the DNC). This is the same data that is used as an example on this week's assignment. 
 
 You should do two things in this assignment:
 
 1. Create a cross-tab. Remember this can be done with prop.table() and table(). You'll want to set it up where party is the dependent variable and the location as the independent variable. You'll also want to use column percentages (margin=2). 
 2. Calculate the chi-squared statistic. Remember chisq.test() expects just the two different vectors (you'll separate them with a comma).
+
+Before you click "Submit Answer" you should look at what the output is from chisq.test().
 
 `@hint`
 
@@ -130,7 +132,7 @@ march_number <- df$marches
 `@sct`
 ```{r}
 ex() %>% {
-  check_function(., "df$party[32]" )
+  check_output_expr(., "df$party[32]" )
   check_object(., "march_number") %>% check_equal()
 }
 ```
@@ -145,7 +147,7 @@ key: 6b032be1b9
 xp: 100
 ```
 
-We will also often want to select subsets of rows that meet some sort of criteria. For example we might want only the data for participants that are over 50 years old. In order to do this we first need to have an idea of logical statements. R allows you to compare two things using ==, !=, >, <, <=, and >=
+We will also often want to select subsets of rows that meet some sort of criteria. For example we might want only the data for participants that are over 50 years old. In order to do this we first need to have an idea of logical statements. R allows you to compare two things using ==, !=, >, <, `<=`, and >=
 
 Comparisons:
 - Equal ==
