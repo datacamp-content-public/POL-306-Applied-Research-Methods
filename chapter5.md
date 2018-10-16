@@ -90,7 +90,7 @@ As a more concrete example lets reassign everyone who said they went on more tha
 
 df$marches[df$marches > 4] <- 4 
 
-Finally if you assign NA then you are making those values that are matched into missing values which makes them easier to drop in commands. 
+Finally if you assign NA then you are making those values that are matched into missing values which makes them easier to drop in commands.
 
 `@instructions`
 You will test to see if there is a difference between how many maarches Democrats and non-Democrats participated in at the protests. Currently party has three attributes: "Democrat", "Independent" and "Other". 
