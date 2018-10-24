@@ -113,7 +113,6 @@ Finally if you assign NA then you are making those values that are matched into 
 df$marches[df$marches > 4] <- NA
 ```
 
-
 `@instructions`
 You will test to see if there is a difference between how many maarches Democrats and non-Democrats participated in at the protests. Currently party has three attributes: "Democrat", "Independent" and "Other". 
 
