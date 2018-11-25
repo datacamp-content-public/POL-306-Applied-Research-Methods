@@ -27,8 +27,6 @@ To change the method and drop missing observations you'd write:
 cor(df$var1, df$var2, method="kendall", use="complete.obs")
 ```
 
-
-
 `@instructions`
 Calculate the **spearman** correlation between `age` and and `marches`. Be sure to exclude missing observations or else you will get `NA` as a result.
 
@@ -80,7 +78,7 @@ xp: 100
 
 To calculate a hypothesis test of a correlation you use `cor.test()` instead of `cor()`. It takes all the arguments that `cor()` does as well as several of the arguments that we used with `t.test()`. In particular you can use `conf.level=` and `alternative=` to change the confidence level and the alternative hypothesis. 
 
-The one difference between `cor()` and `cor.test()` is that `cor.test()` automatically drops any observation with missing values. 
+The one difference between `cor()` and `cor.test()` is that `cor.test()` automatically drops any observation with missing values.
 
 `@instructions`
 Calculate a hypothesis test for the correlation we did in the last exercise (the spearman correlation between `age` and `marches`). This should use a two-sided alternative and a 95% confidence interval (the defaults).
