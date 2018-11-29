@@ -77,8 +77,7 @@ The reason that we save the `lm()` object is that there are a lot of things we c
 
 - `coef(mod)` will create a vector of just the coefficients, which can be useful if we want to do something to them (as we will with the logistic regression). 
 - `mod$residuals` is a vector of all the residuals for the regression. We could easily plot them with `plot(mod$residuals)` and one of the simpler ways to get the number of observations is with `length(mod$residuals)`.
-- `mod$fitted.values` is a vector of the predictions from the regression. 
-
+- `mod$fitted.values` is a vector of the predictions from the regression.
 
 `@instructions`
 Using the `mod` we made in the last assignment (I included the code here), do the following:
