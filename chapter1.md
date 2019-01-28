@@ -1,6 +1,7 @@
 ---
 title: 'Introduction to R'
 description: 'Today we are going to learn the basics of R. '
+free_preview: true
 ---
 
 ## R Addition
