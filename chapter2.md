@@ -423,7 +423,7 @@ ex() %>% {
 
 ---
 
-## Insert exercise title here
+## Mean and Median
 
 ```yaml
 type: NormalExercise
