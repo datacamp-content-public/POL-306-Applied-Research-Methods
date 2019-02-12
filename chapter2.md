@@ -427,6 +427,64 @@ ex() %>% {
 
 ```yaml
 type: NormalExercise
+key: 51ff613b00
+xp: 100
+```
+
+R has functions that can easily compute the mean and median of a vector. The function for the mean is mean() and the function for median is median().
+
+`@instructions`
+For this assignment you will have to load the dataset "state_party.csv" again and then calculate the mean and median of the percentage of democrats in a state (the variables are called democrat and republican).
+
+Remember to load data you need to call read.csv save the output: df <- read.csv("state_party.csv") and then you can access the variables in the dataset using the $.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/f4fba345dc08afca82b97fc821143163783daaa8/state_party.csv")
+
+write.csv(tmp.df, "state_party.csv", row.names=F)
+rm(list=ls())
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+df <- read.csv("state_party.csv")
+
+mean(df$democrat)
+median(df$democrat)
+
+
+mean(df$republican)
+median(df$republican)
+```
+
+`@sct`
+```{r}
+ex() %>% {
+  check_function(., "mean") 
+  check_function(., "median") 
+  check_output_expr(., "mean(df$democrat)")
+  check_output_expr(., "median(df$democrat)")
+  check_output_expr(., "mean(df$republican)")
+  check_output_expr(., "median(df$republican)")
+
+}
+```
+
+---
+
+## Final Note
+
+```yaml
+type: NormalExercise
 key: f3fec926b7
 xp: 100
 ```
