@@ -12,7 +12,9 @@ key: 9ed7531164
 xp: 100
 ```
 
-We will start off seeing how R can be used as a calculator.
+We will start off seeing how R can be used as a calculator. 
+
+Look at the code on the right to see how to do simple addition. 
 
 `@instructions`
 Add together 7 and 11
@@ -121,8 +123,8 @@ Just like you should, R follows PEMDAS rules of operation.
 `@instructions`
 Type in two different operations. 
 
-- Multiply 3 by 4 and then subtract 1 from it (your answer should be 11).
-- Add 3 and 2 together and then multiple that by 5 (your answer should be 25).
+1) Multiply 3 by 4 and then subtract 1 from it (your answer should be 11).
+2) Add 3 and 2 together and then multiple that by 5 (your answer should be 25).
 
 `@hint`
 

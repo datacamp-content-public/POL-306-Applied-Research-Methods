@@ -67,17 +67,20 @@ key: ed9703cc7f
 xp: 100
 ```
 
-Next, you can use sd() to find the standard deviation of a vector.
+Next, you can use `sd()` to find the standard deviation of a vector.
+
+Along with the percentage of Democrats/Republicans in a state the data has the percentage of state legislators that are Democratic and Republican. These variables are called `hs_dem_prop_all` and `hs_rep_prop_all`
 
 `@instructions`
-Along with the percentage of Democrats/Republicans in a state the data has the percentage of state legislators that are Democratic and Republican. 
+For this assignment pick either the proportion of Democrats or the proportion of Republicans and: 
+1) Find the mean.
+2) Find the standard deviation.
+3) Plot the histogram. 
 
-For this assignment find the mean, the standard deviation and plot the histogram of either the percentage of Democrats or Republicans in a state legislature. 
-
-To find out what the variable is called use names(). Also note, Nebraska (which is in the data) has a non-partisan legislature so it does not have a value for Republicans and Democrats. You will need to tell R to ignore this when you calculate the mean and standard deviation.
+Also note, Nebraska (which is in the data) has a non-partisan legislature so it does not have a value for Republicans and Democrats. You will need to tell R to ignore this when you calculate the mean and standard deviation.
 
 `@hint`
-
+Remember to ignore missing observations use `na.rm=T`
 
 `@pre_exercise_code`
 ```{r}
