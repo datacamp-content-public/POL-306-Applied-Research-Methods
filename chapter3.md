@@ -13,15 +13,15 @@ xp: 100
 
 Now we will briefly explore histograms in R. 
 
-Histograms are done by using the function hist(). Like most of our functions it expects that the first thing it encounters will be the variable you want a histogram of. It also has a lot of other attributes:
+Histograms are done by using the function `hist()`. Like most of our functions it expects that the first thing it encounters will be the variable you want a histogram of. It also has a lot of other attributes:
 
-- xlab = "something" *changes the x axis label*
-- ylab = "something" *changes the y axis label*
-- main = "something" *changes the the main label*
-- break = ... *this argument can take a lot of options, most common though is the number of boxes you want. To make your histogram have 5 boxes you set break=5*
+- `xlab = "something"` *changes the x axis label*
+- `ylab = "something"` *changes the y axis label*
+- `main = "something"` *changes the the main label*
+- `break = ...` *this argument can take a lot of options, most common though is the number of boxes you want. To make your histogram have 5 boxes you set break=5*
 
 `@instructions`
-Make a histogram of either democrat or republican and change the xaxis and the main title.
+Make a histogram of either `democrat` or `republican` and change the xaxis and the main title.
 
 `@hint`
 
@@ -130,10 +130,10 @@ xp: 100
 
 Up until now we've been focusing on interval variables, but many of you are using nominal or ordinal variables. 
 
-Creating frequency tables and crosstabs is really simple in R. All you have to use is the table() function. The tables function expects either 1 or 2 vectors. If you do table(x) then it will show the frequency of all the values that x takes on. If you do table(x, y) then it creates a frequency crosstab between x and y.
+Creating frequency tables and crosstabs is really simple in R. All you have to use is the `table()` function. The tables function expects either 1 or 2 vectors. If you do `table(x)` then it will show the frequency of all the values that `x` takes on. If you do `table(x, y)` then it creates a frequency crosstab between `x` and `y`.
 
 `@instructions`
-I've loaded a new dataset for you all in this assignment. There is now a csv called "ANES_Lim.csv" that comes from the survey data some of you are using. It includes three variables: gender, employment status, and how interested they are in the news. 
+I've loaded a new dataset for you all in this assignment. There is now a csv called "ANES_Lim.csv" that comes from the survey data some of you are using. It includes three variables: gender, employment status, and how interested they are in the news. You can use `names()` to see what the different variables are in the dataset.  
 
 For this assignment you just need to load the data and create a frequency table and a crosstab. You can use whatever variables you want.
 
@@ -179,11 +179,11 @@ key: 165fbe52f5
 xp: 100
 ```
 
-The table() function only creates frequency tables and does not show proportions. To calculate that we need to run another function: prop.table()
+The `table()` function only creates frequency tables and does not show proportions. To calculate that we need to run another function: `prop.table()`
 
-The easiest way to do this is to nest functions. We do this by putting another function around our first function so instead of table(x) we would do prop.table(table(x)). This calculates a frequency table for x, then returns it to prop.table which calculates the cells as a proportion. 
+The easiest way to do this is to nest functions. We do this by putting another function around our first function so instead of `table(x)` we would do `prop.table(table(x))`. This calculates a frequency table for `x`, then returns it to `prop.table` which calculates the cells as a proportion. 
 
-prop.table() also needs to be told if you want to calculate proportions for rows or columns. It does this through the margin argument. Remember to use an argument you put it in the function call separating arguments with a comma. So: prop.table(table(x), margin=1). Margin can be set to 1, 2, or left empty.
+`prop.table()` also needs to be told if you want to calculate proportions for rows or columns. It does this through the margin argument. Remember to use an argument you put it in the function call separating arguments with a comma. So: `prop.table(table(x), margin=1)`. Margin can be set to 1, 2, or left empty.
 
 `@instructions`
 Create crosstabs of the relationship between interest in news and gender. Assume that gender is your independent variable and that news interest is your dependent variable. You'll have to figure out if margin should be 1 or 2 to ensure that you have column proportions.
@@ -232,9 +232,9 @@ key: a89bdff145
 xp: 100
 ```
 
-One last thing. You may have noticed that you didn't directly see the number of observations in the tables we created. You'll have to check those yourself. The easiest way is to again use a function within a function by calling sum(table(x)). This will add up all the individual frequencies. 
+One last thing. You may have noticed that you didn't directly see the number of observations in the tables we created. You'll have to check those yourself. The easiest way is to again use a function within a function by calling `sum(table(x))`. This will add up all the individual frequencies. 
 
-For interval variables you can calculate this by seeing which of your observations are not missing and then adding up that. This first step is done using is.na() which checks to see if an observation is missing and returns true or false. You want the opposite of that so you add an exclamation point in front and then sum it up: sum(!is.na(x))
+For interval variables you can calculate this by seeing which of your observations are not missing and then adding up that. This first step is done using `is.na()` which checks to see if an observation is missing and returns true or false. You want the opposite of that so you add an exclamation point in front and then sum it up: `sum(!is.na(x))`
 
 `@instructions`
 No assignment here. Click next after looking at the code to be done.

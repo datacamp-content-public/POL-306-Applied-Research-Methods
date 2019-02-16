@@ -15,7 +15,7 @@ t-tests in R use the function `t.test()`. They use formulas to identify what the
 
 A formula for `t.test()` will look something like: interval_variable~group_variable. 
 
-`t.test()` expects the first argument to be a formula and you can include the dataframe as the second argument. If you include the dataframe as the second argument you don't have to worry about doing df$ for each variable. For example if you have a dataset, df with two variables X (your grouping variable) and Y (your interval variable) you can call t.test() like this: 
+`t.test()` expects the first argument to be a formula and you can include the dataframe as the second argument. If you include the dataframe as the second argument you don't have to worry about doing df$ for each variable. For example if you have a dataset, `df` with two variables `X` (your grouping variable) and `Y` (your interval variable) you can call `t.test()` like this: 
 
 ```
 t.test(Y~X, df) 
@@ -39,7 +39,7 @@ t.test(Y~X, df, alternative="two.sided")
 
 ```
 
-There are also several other arguments for `t.test()` and if you want you can check them by calling ?t.test
+There are also several other arguments for `t.test()` and if you want you can check them by calling `?t.test`
 
 `@instructions`
 We are going to keep using the protest dataset. You will do a t.test on if the people that protested at the DNC are younger than protesters at the RNC. I want you to call `t.test()` three times once with each different alternative choice. Look at how the p-value and the confidence intervals change.
@@ -116,8 +116,8 @@ df$marches[df$marches > 4] <- NA
 `@instructions`
 You will test to see if there is a difference between how many maarches Democrats and non-Democrats participated in at the protests. Currently party has three attributes: "Democrat", "Independent" and "Other". 
 
-1. Start by creating a new variable in the dataset named party_new based on the current variable party. 
-2. After you create the variable party_new change all the instances where it is "Independent" to "Other"
+1. Start by creating a new variable in the dataset named `party_new` based on the current variable party. 
+2. After you create the variable `party_new` change all the instances where it is `"Independent"` to `"Other"`
 3. Finally do a t-test on the the difference in marches (not the march_recode) between Democrats and non-Democrats.
 
 `@hint`

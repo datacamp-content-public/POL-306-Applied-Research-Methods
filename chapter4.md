@@ -20,8 +20,8 @@ You are going to analyze the relationship between party identification and what 
 
 You should do two things in this assignment:
 
-1. Create a cross-tab. Remember this can be done with prop.table() and table(). You'll want to set it up where party is the dependent variable and the location as the independent variable. You'll also want to use column percentages (margin=2). 
-2. Calculate the chi-squared statistic. Remember chisq.test() expects just the two different vectors (you'll separate them with a comma).
+1. Create a cross-tab. Remember this can be done with `prop.table()` and `table()`. You'll want to set it up where party is the dependent variable and the location as the independent variable. You'll also want to use column percentages (margin=2). 
+2. Calculate the chi-squared statistic. Remember `chisq.test()` expects just the two different vectors (you'll separate them with a comma).
 
 Before you click "Submit Answer" you should look at what the output is from chisq.test().
 
@@ -97,7 +97,7 @@ Along with accessing elements you can change them using `<-` to assign a new val
 
 `@instructions`
 1. Find out what the party is of the 32nd observation (row) in the dataframe. DO NOT SAVE IT, JUST PRINT IT OUT. 
-2. There is a variable marches in the dataframe. Save it as a new variable: march_number. This new variable will be independent on the dataframe.
+2. There is a variable `marches` in the dataframe. Save it as a new variable: `march_number`. This new variable will be independent on the dataframe.
 
 `@hint`
 
@@ -166,10 +166,10 @@ For example:
 sub.df <- subset(df, age < 30) 
 ```
 
-This will create a new dataframe called `sub.df` that includes only observations where df$age is less than 30 (note you do not need to repeat `df` when identifying the age variable as the subset function knows to look for age in the dataframe you provided).
+This will create a new dataframe called `sub.df` that includes only observations where `df$age` is less than 30 (note you do not need to repeat `df` when identifying the age variable as the subset function knows to look for age in the dataframe you provided).
 
 `@instructions`
-Use the subset function and a logical statement to create a new dataframe called sub.df that only contains individuals that identify as Democrats. Note the variable of interest is party and it takes on three values here "Democrat", "Other", and "Independent"
+Use the subset function and a logical statement to create a new dataframe called sub.df that only contains individuals that identify as Democrats. Note the variable of interest is party and it takes on three values here `"Democrat"`, `"Other"`, and `"Independent"`
 
 `@hint`
 

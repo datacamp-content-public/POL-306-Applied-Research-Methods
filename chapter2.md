@@ -11,14 +11,14 @@ key: f870f1cdb4
 xp: 100
 ```
 
-In class this week we started talking about variables. Today we are going to see how variables work in R and how to explore them in a dataset. 
+Today we are going to see how variables work in R and how to explore them in a dataset. 
 
 When we talk about a variable in R, we don't necessarily mean the exact same thing as a variable in general. In R when we say variable we just mean something that we've stored in R and can recall. In the below example you will see two types of things you can store and how to get them back.
 
 `@instructions`
-Variables are created in R by assigning "something" to a word or letter. The word or letter is the variable. You use "<-" to assign something to it. So if you want to assign the number 4 to the variable "kevin" you would write: "kevin <- 4". This assigns "4" to "kevin". You can then recall kevin, by just typing kevin. 
+Variables are created in R by assigning something to a word or letter. The word or letter is the variable. You use `<-` to assign something to it. So if you want to assign the number `4` to the variable `kevin` you would write: `kevin <- 4`. This assigns `4` to `kevin`. You can then recall `kevin`, by typing `kevin` and hitting enter (this is often refered to as _calling a variable_). 
 
-For this assignment I want you to create a variable named pol and assign it the value 25 and then call that variable to show what it is.
+For this assignment I want you to create a variable named `pol` and assign it the value `25` and then call that variable to show what it is.
 
 `@hint`
 
@@ -73,10 +73,10 @@ key: 3661b50a7d
 xp: 100
 ```
 
-Variables don't just have to store numbers, they can also store words or sentences (called **strings**) or a list of numbers (called **vectors**).
+Variables don't just have to store numbers, they can also store words or sentences (called **strings**) or a list of numbers (called **vectors**). See the code to the right to see how you create these two types of variables. 
 
 `@instructions`
-Create one vector called x with the value "Political Science" and another vector called y that is a list of the numbers 1 through 5.
+Create one vector called `x` with the value `"Political Science"` and another vector called `y` that is a list of the numbers `1` through `5`.
 
 `@hint`
 
@@ -145,7 +145,7 @@ Variables are useful in R because we can easily manipulate vectors without havin
 For example, the current population of Ohio is 11,658,609 if you want to figure out what 10% or 20% of the population is you can store the population as a variable and then multiply it by .1 and .25.
 
 `@instructions`
-The Pennsylvania population is 12,805,537. Store it as the variable pa.pop and then figure out what 10%, 25% and 50% of the population of Pennsylvania is.
+The Pennsylvania population is 12,805,537. Store it as the variable `pa.pop` and then figure out what 10%, 25% and 50% of the population of Pennsylvania is by multiplying that variable.
 
 `@hint`
 
@@ -208,20 +208,20 @@ key: 4459f12500
 xp: 100
 ```
 
-Along with variables, R has **functions** which are scripts that run on the variables you give them. There are thousands of functions that have been written for R, and you can download more of them for specialized tasks as well. Right now we are just going to see how functions work, and how to find out more about them.
+Along with variables, R has **functions** which take in one or more variables and return a result (just like a function in math). There are thousands of functions that have been written for R, and you can download more of them for specialized tasks as well. Right now we are just going to see how functions work, and how to find out more about them.
 
-`@instructions`
-We are going to start by looking at just three functions: sum, range, and sort. Each function is run by writing function(x) where "function" is the name of the function and "x" is the variable you are running it on. You can also save the output of a function as a new variable just like you would store another variable: "y <- function(x)"
+We are going to start by looking at just three functions: `sum`, `range`, and `sort`. Each function is run by writing `function(x)` where `function` is the name of the function and `x` is the variable you are running it on. You can also save the output of a function as a new variable just like you would store another variable: `y <- function(x)`
 
 The functions that we will use here are relatively simple:
 - sum: returns the summation of all the numbers in the vector you give it. 
 - range: returns the minimum and maximum value present in the vector you give it. 
 - sort: returns the vector you gave it but reordered from lowest to highest
 
-Start by defining a variable called x that is a vector that contains the numbers 12, 4, 3, 2, 5, and -4. 
-Next calculate the summation of all the numbers in x and store it as tot. 
-Then find the minimum and maximum of x. 
-Finally use the sort function to rewrite x so that it is in order from highest to lowest (you will have to save this new x overtop of the old x).
+`@instructions`
+1) Start by defining a variable called `x` that is a vector that contains the numbers 12, 4, 3, 2, 5, and -4. 
+2) Next calculate the sum of all the numbers in `x` and store it as `tot`. 
+3) Then find the minimum and maximum of `x` (you do not need to store these as anything). 
+4) Finally use the `sort` function to rewrite `x` so that it is in order from highest to lowest (you will have to save this new `x` overtop of the old `x`).
 
 `@hint`
 
@@ -269,7 +269,7 @@ key: 71bee9060e
 xp: 100
 ```
 
-In general R is not often very helpful (at least when it produces errors). It can be helpful though if you need to understand **what** you can do with a function. R has its own baked in help that you can access by running "?function" where function is the function you want help about. This will open up something (if you are in RStudio it will open a page on the lower right) that explains:
+In general R is not often very helpful (at least when it produces errors). It can be helpful though if you need to understand **what** you can do with a function. R has its own baked in help that you can access by running `?function` where function is the function you want help about. This will open up something (if you are in RStudio it will open a page on the lower right) that explains:
 
 - A short description of the function
 - How you can call the function (this sometimes includes related functions as well), including how to set different options (arguments)
@@ -280,7 +280,7 @@ In general R is not often very helpful (at least when it produces errors). It ca
 `@instructions`
 This will be a simple assignment. All I want is for you to take a vector used in the previous assignment and sort it but instead of having it go from low to high it should go from high to low. To do this you'll need to look up the help page of sort and look for an argument that you think will change the direction of the ordering.
 
-Note that a lot of arguments take the form of "something = FALSE" this means that the default is for this argument to be off. To turn it on, change it to "something = TRUE" when you call it.
+Note that a lot of arguments take the form of `something = FALSE` this means that the default is for this argument to be off. To turn it on, change it to `something = TRUE` when you call it.
 
 `@hint`
 
@@ -357,12 +357,12 @@ We usually do not build all of our variables by hand. Instead we use saved files
 
 Datasets are like excel sheets where each column is a different variable and each row is a different unit. Often you will actually load a dataset from an excel file or from a "csv" file. You will have to store the dataset as its own "variable" just like you stored the numbers, strings, and vectors previously. Then you will be able to access different variables and units on the dataset. 
 
-To load a dataset you need to use the function: **read.csv** this takes the name of the file as an argument and returns the dataset.
+To load a dataset you need to use the function: `read.csv `this takes the name of the file as an argument and returns the dataset.
 
-Once you load the dataset you can access particular variables in it using **$variablename**. If you had a variable named gender in the dataset df then you'd access it by calling **df$gender**
+Once you load the dataset you can access particular variables in it using `$variablename`. If you had a variable named gender in the dataset df then you'd access it by calling `df$gender`
 
 `@instructions`
-There is a dataset named "state_party.csv" which contains data for 2010 on the estimated proportion of Republican and Democratic voters as well a the percentage of Democrats and Republicans in the state legislature (just the lower chamber). 
+There is a dataset named `"state_party.csv"` which contains data for 2010 on the estimated proportion of Republican and Democratic voters as well a the percentage of Democrats and Republicans in the state legislature (just the lower chamber). 
 
 You are going to load it, and then calculate the range of democrats and republican voters and store them (separately) as dem.range and rep.range.
 
@@ -431,12 +431,12 @@ key: 51ff613b00
 xp: 100
 ```
 
-R has functions that can easily compute the mean and median of a vector. The function for the mean is mean() and the function for median is median().
+R has functions that can easily compute the mean and median of a vector. The function for the mean is `mean()` and the function for median is `median()`.
 
 `@instructions`
-For this assignment you will have to load the dataset "state_party.csv" again and then calculate the mean and median of the percentage of democrats in a state (the variables are called democrat and republican).
+For this assignment you will have to load the dataset `"state_party.csv"` again and then calculate the mean and median of the percentage of democrats in a state (the variables are called democrat and republican).
 
-Remember to load data you need to call read.csv and save the output: df <- read.csv("state_party.csv") and then you can access the variables in the dataset using the $.
+Remember to load data you need to call read.csv and save the output: `df <- read.csv("state_party.csv")` and then you can access the variables in the dataset using the `$`.
 
 `@hint`
 
@@ -491,12 +491,12 @@ xp: 100
 
 A final few notes. 
 
-1) In order to load a file using read.csv() you first have to tell R where to look on your computer. To do this you will need to use setwd(). In setwd() you need to place the path to your file. This might look like: "/users/kevinreuning/dropbox" or "C:/users/kevinreuning/dropbox". 
+1) In order to load a file using `read.csv()` you first have to tell R where to look on your computer. To do this you will need to use `setwd()`. In `setwd()` you need to place the path to your file. This might look like: `"/users/kevinreuning/dropbox"` or `"C:/users/kevinreuning/dropbox"`. 
 
-2) Sometimes vectors in datasets have missing values. Theses show up as NA when you call them. A lot of R functions do not know what to do with missing values so you have to tell it what to do. To do this you *usually* add na.rm=T to a function call. Below I demonstrate both of these.
+2) Sometimes vectors in datasets have missing values. Theses show up as `NA` when you call them. A lot of R functions do not know what to do with missing values so you have to tell it what to do. To do this you _usually_ add `, na.rm=T` to a function call. Below I demonstrate both of these.
 
 `@instructions`
-No assignment for this one, just look at what I did to setwd() and to use a function on a vector with missing values. 
+No assignment for this one, just look at what I did to `setwd()` and to use a function on a vector with missing values. 
 
 After you run the code just hit submit answer to finish this chapter.
 
