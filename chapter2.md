@@ -73,7 +73,7 @@ key: 3661b50a7d
 xp: 100
 ```
 
-Variables don't just have to store numbers, they can also store words or sentences (called **strings**) or a list of numbers (called **vectors**). See the code to the right to see how you create these two types of variables. 
+Variables don't just have to store numbers, they can also store words or sentences (called **strings**) or a list of numbers (called **vectors**). See the code to the right to see how you create these two types of variables.
 
 `@instructions`
 Create one vector called `x` with the value `"Political Science"` and another vector called `y` that is a list of the numbers `1` through `5`.

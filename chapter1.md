@@ -14,7 +14,7 @@ xp: 100
 
 We will start off seeing how R can be used as a calculator. 
 
-Look at the code on the right to see how to do simple addition. 
+Look at the code on the right to see how to do simple addition.
 
 `@instructions`
 Add together 7 and 11
