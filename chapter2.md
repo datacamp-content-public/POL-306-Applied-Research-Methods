@@ -215,7 +215,7 @@ We are going to start by looking at just three functions: `sum`, `range`, and `s
 The functions that we will use here are relatively simple:
 - sum: returns the summation of all the numbers in the vector you give it. 
 - range: returns the minimum and maximum value present in the vector you give it. 
-- sort: returns the vector you gave it but reordered from highest to lowest. 
+- sort: returns the vector you gave it but reordered from highest to lowest.
 
 `@instructions`
 1. ) Start by defining a variable called `x` that is a vector that contains the numbers 12, 4, 3, 2, 5, and -4. 
