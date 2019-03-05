@@ -1,5 +1,5 @@
 ---
-title: 'Central Tendency'
+title: 'Plots and Distributions'
 description: ""
 ---
 
@@ -224,7 +224,7 @@ ex() %>% {
 
 ---
 
-## Finding observation numbers
+## Finding Number of Observations
 
 ```yaml
 type: NormalExercise
