@@ -292,7 +292,6 @@ One last things. You may have noticed that you didn't directly see the number of
 
 For interval variables you can calculate this by seeing which of your observations are not missing and then adding up that. This first step is done using `is.na()` which checks to see if an observation is missing and returns true or false. You want the opposite of that so you add an exclamation point in front and then sum it up: `sum(!is.na(x))`
 
-
 `@instructions`
 No assignment here. Click next after looking at the code to be done.
 
