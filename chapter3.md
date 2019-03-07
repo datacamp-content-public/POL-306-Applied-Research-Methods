@@ -123,7 +123,7 @@ Next, you can use `sd()` to find the standard deviation of a vector.
 Along with the percentage of Democrats/Republicans in a state the data has the percentage of state legislators that are Democratic and Republican. These variables are called `hs_dem_prop_all` and `hs_rep_prop_all`
 
 `@instructions`
-For this assignment pick either the proportion of Democrats or the proportion of Republicans and: 
+For this assignment using the proportion of Democrats: 
 1. Find the mean.
 2. Find the standard deviation.
 3. Plot the histogram. 
