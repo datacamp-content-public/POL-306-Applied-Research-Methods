@@ -124,9 +124,9 @@ Along with the percentage of Democrats/Republicans in a state the data has the p
 
 `@instructions`
 For this assignment pick either the proportion of Democrats or the proportion of Republicans and: 
-1) Find the mean.
-2) Find the standard deviation.
-3) Plot the histogram. 
+1. Find the mean.
+2. Find the standard deviation.
+3. Plot the histogram. 
 
 Also note, Nebraska (which is in the data) has a non-partisan legislature so it does not have a value for Republicans and Democrats. You will need to tell R to ignore this when you calculate the mean and standard deviation.
 
@@ -283,11 +283,10 @@ key: a89bdff145
 xp: 100
 ```
 
-Two last things. You may have noticed that you didn't directly see the number of observations in the tables we created. You'll have to check those yourself. The easiest way is to again use a function within a function by calling `sum(table(x))`. This will add up all the individual frequencies. 
+One last things. You may have noticed that you didn't directly see the number of observations in the tables we created. You'll have to check those yourself. The easiest way is to again use a function within a function by calling `sum(table(x))`. This will add up all the individual frequencies. 
 
 For interval variables you can calculate this by seeing which of your observations are not missing and then adding up that. This first step is done using `is.na()` which checks to see if an observation is missing and returns true or false. You want the opposite of that so you add an exclamation point in front and then sum it up: `sum(!is.na(x))`
 
-Second, many functions have trouble when there are missing values. The most common way to deal with this is by adding the argument `na.rm=T`
 
 `@instructions`
 No assignment here. Click next after looking at the code to be done.
