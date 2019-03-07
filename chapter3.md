@@ -11,7 +11,7 @@ key: cbdcac27ae
 xp: 100
 ```
 
-Now we will briefly explore histograms in R. 
+First we will briefly explore histograms in R. 
 
 Histograms are done by using the function `hist()`. Like most of our functions it expects that the first thing it encounters will be the variable you want a histogram of. It also has a lot of other attributes:
 
@@ -55,6 +55,58 @@ ex() %>% check_function("hist") %>% {
   check_arg(., "xlab")
   check_arg(., "main")
 }
+```
+
+---
+
+## Density Plots
+
+```yaml
+type: NormalExercise
+key: 1b22036269
+xp: 100
+```
+
+Now we will explore density plots in R. 
+
+Density plots require using two functions at once `density()` and `plot()`. You can nest them so that they happen at the same time like: `plot(density(x))` where x is what you want to plot the the density of. You can change attributes of the plot using the same attributes from the `hist()` function as long as they are outside the first set of parentheses: `plot(density(x), xlab="X Label")`. 
+
+You can see how different weighting schemes impact the density plot by setting `adjust=` to something. The default would be: `plot(density(x, adjust=1))`. 
+
+
+`@instructions`
+Make a density plot of either `democrat` or `republican` and change the `adjust` argument to something other than 1.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+tmp.df <- read.csv("https://assets.datacamp.com/production/repositories/3406/datasets/f4fba345dc08afca82b97fc821143163783daaa8/state_party.csv")
+
+write.csv(tmp.df, "state_party.csv", row.names=F)
+rm(list=ls())
+```
+
+`@sample_code`
+```{r}
+df <- read.csv("state_party.csv")
+
+```
+
+`@solution`
+```{r}
+df <- read.csv("state_party.csv")
+
+
+plot(density(df$republican, adjust=.5))
+```
+
+`@sct`
+```{r}
+ex() %>% check_function("density") %>% {
+  check_arg(., "adjust")
+ }
 ```
 
 ---
@@ -224,7 +276,7 @@ ex() %>% {
 
 ---
 
-## Finding Number of Observations
+## Finding Number of Observations and Dealing with Missing Values
 
 ```yaml
 type: NormalExercise
@@ -232,9 +284,11 @@ key: a89bdff145
 xp: 100
 ```
 
-One last thing. You may have noticed that you didn't directly see the number of observations in the tables we created. You'll have to check those yourself. The easiest way is to again use a function within a function by calling `sum(table(x))`. This will add up all the individual frequencies. 
+Two last things. You may have noticed that you didn't directly see the number of observations in the tables we created. You'll have to check those yourself. The easiest way is to again use a function within a function by calling `sum(table(x))`. This will add up all the individual frequencies. 
 
 For interval variables you can calculate this by seeing which of your observations are not missing and then adding up that. This first step is done using `is.na()` which checks to see if an observation is missing and returns true or false. You want the opposite of that so you add an exclamation point in front and then sum it up: `sum(!is.na(x))`
+
+Second, many functions have trouble when there are missing values. The most common way to deal with this is by adding the argument `na.rm=T`
 
 `@instructions`
 No assignment here. Click next after looking at the code to be done.
