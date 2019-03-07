@@ -71,8 +71,7 @@ Now we will explore density plots in R.
 
 Density plots require using two functions at once `density()` and `plot()`. You can nest them so that they happen at the same time like: `plot(density(x))` where x is what you want to plot the the density of. You can change attributes of the plot using the same attributes from the `hist()` function as long as they are outside the first set of parentheses: `plot(density(x), xlab="X Label")`. 
 
-You can see how different weighting schemes impact the density plot by setting `adjust=` to something. The default would be: `plot(density(x, adjust=1))`. 
-
+You can see how different weighting schemes impact the density plot by setting `adjust=` to something. The default would be: `plot(density(x, adjust=1))`.
 
 `@instructions`
 Make a density plot of either `democrat` or `republican` and change the `adjust` argument to something other than 1.
