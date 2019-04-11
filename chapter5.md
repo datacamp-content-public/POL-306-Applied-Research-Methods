@@ -116,7 +116,7 @@ df$marches[df$marches > 4] <- NA
 `@instructions`
 You will test to see if there is a difference between how many marches Democrats and non-Democrats participated in at the protests. Currently party has three attributes: "Democrat", "Independent" and "Other". 
 
-1. Start by creating a new variable in the dataset named `party_new` based on the current variable party. 
+1. Start by creating a new variable in the dataset named `party_new` based on the current variable `party`. 
 2. After you create the variable `party_new` change all the instances where it is `"Independent"` to `"Other"`
 3. Finally do a t-test on the the difference in marches (not the march_recode) between Democrats and non-Democrats.
 
